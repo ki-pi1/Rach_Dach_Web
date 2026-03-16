@@ -1,0 +1,5 @@
+##
+Baue eine Landing-Page für eine Dachdecker Firma. Nutze modernes Design im minimalistischen Stil von Apple. Nutze im Hero ein Cursor-Spotlight. Orientiere dich an aktuellen Webdesign-Trends wie z.B Bento.
+
+##
+Schau dir das Webprojekt unter http_//localhost_5173 an und prüfe, ob es visuelle Probleme gibt bei unterschiedlichen Auflösungen. Fixe die Probleme, die dir auffallen
