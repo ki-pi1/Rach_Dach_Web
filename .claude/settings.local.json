@@ -5,7 +5,9 @@
       "Bash(npm create:*)",
       "Bash(npx sv:*)",
       "Bash(npm install:*)",
-      "Bash(npx tailwindcss:*)"
+      "Bash(npx tailwindcss:*)",
+      "Bash(winget install:*)",
+      "Bash(gh auth:*)"
     ]
   },
   "hooks": {
