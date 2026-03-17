@@ -9,7 +9,13 @@ services:
       - "traefik.http.routers.web.entrypoints=websecure"
       - "traefik.http.routers.web.tls.certresolver=letsencrypt"
       - "traefik.http.services.web.loadbalancer.server.port=3000"
+      - "traefik.docker.network=rach_dach_web_default"
     environment:
       - NODE_ENV=production
-      - PORT=3000
     restart: unless-stopped
+    networks:
+      - rach_dach_web_default
+networks:
+    rach_dach_web_default:
+      external: true
+

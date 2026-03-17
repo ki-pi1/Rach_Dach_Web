@@ -8,5 +8,13 @@
     "claude-md-management@claude-plugins-official": true,
     "supabase@claude-plugins-official": true,
     "firecrawl@claude-plugins-official": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/andrg/OpenRouter/Rach_Lager_App/src/lib/components/**)",
+      "Bash(done)"
+    ]
   }
 }
