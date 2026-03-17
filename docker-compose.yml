@@ -11,4 +11,5 @@ services:
       - "traefik.http.services.web.loadbalancer.server.port=3000"
     environment:
       - NODE_ENV=production
+      - PORT=3000
     restart: unless-stopped

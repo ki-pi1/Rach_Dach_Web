@@ -27,8 +27,11 @@ export default {
           accent: '#B87333',
           neutral: '#1A1A1A',
           'base-100': '#F8F8F8',
+          'base-content': '#1A1A1A',
         },
       },
     ],
+    darkTheme: 'dachdecker',
+    logs: false,
   },
 };

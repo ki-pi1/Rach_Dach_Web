@@ -1,10 +1,8 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-
   let scrolled = $state(false);
   let menuOpen = $state(false);
 
-  onMount(() => {
+  $effect(() => {
     const handler = () => { scrolled = window.scrollY > 40; };
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
