@@ -1,6 +1,18 @@
 <script lang="ts">
+  import { page } from '$app/stores';
+
   let scrolled = $state(false);
   let menuOpen = $state(false);
+
+  const isHome = $derived($page.url.pathname === '/');
+  const anchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
+
+  const navItems = [
+    { label: 'Leistungen', href: () => anchor('leistungen') },
+    { label: 'Referenzen', href: () => '/referenzen' },
+    { label: 'Über uns', href: () => '/ueber-uns' },
+    { label: 'Kontakt', href: () => anchor('kontakt') },
+  ];
 
   $effect(() => {
     const handler = () => { scrolled = window.scrollY > 40; };
@@ -24,22 +36,27 @@
 
     <!-- Desktop Nav -->
     <ul class="hidden md:flex items-center gap-8">
-      {#each ['Leistungen', 'Referenzen', 'Über uns', 'Kontakt'] as item}
+      {#each navItems as item}
         <li>
           <a
-            href="#{item.toLowerCase().replace(' ', '-')}"
+            href={item.href()}
             class="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200"
           >
-            {item}
+            {item.label}
           </a>
         </li>
       {/each}
+      <li>
+        <a href="/blog" class="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200">
+          Blog
+        </a>
+      </li>
     </ul>
 
     <!-- CTA -->
     <div class="hidden md:flex items-center gap-4">
       <a
-        href="#kontakt"
+        href={anchor('kontakt')}
         class="bg-signal-orange hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded transition-colors duration-200"
       >
         Angebot anfordern
@@ -65,17 +82,24 @@
   <!-- Mobile Menu -->
   {#if menuOpen}
     <div class="md:hidden bg-anthrazit/95 backdrop-blur-md border-t border-white/10 px-6 py-4 flex flex-col gap-4">
-      {#each ['Leistungen', 'Referenzen', 'Über uns', 'Kontakt'] as item}
+      {#each navItems as item}
         <a
-          href="#{item.toLowerCase().replace(' ', '-')}"
+          href={item.href()}
           class="text-white/80 hover:text-white text-base font-medium transition-colors"
           onclick={() => (menuOpen = false)}
         >
-          {item}
+          {item.label}
         </a>
       {/each}
       <a
-        href="#kontakt"
+        href="/blog"
+        class="text-white/80 hover:text-white text-base font-medium transition-colors"
+        onclick={() => (menuOpen = false)}
+      >
+        Blog
+      </a>
+      <a
+        href={anchor('kontakt')}
         class="bg-signal-orange text-white text-sm font-semibold px-5 py-3 rounded text-center mt-2"
         onclick={() => (menuOpen = false)}
       >

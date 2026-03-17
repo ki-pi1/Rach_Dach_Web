@@ -11,10 +11,10 @@
 
   // Outer corner: rounded. Inner corner: concave via background-colored overlay div.
   const tiles = [
-    { imgPos: 'object-[30%_20%]', outer: 'rounded-tl-[20px]', innerAt: 'bottom-0 right-0', innerR: 'rounded-tl-[20px]' },
-    { imgPos: 'object-[70%_20%]', outer: 'rounded-tr-[20px]', innerAt: 'bottom-0 left-0',  innerR: 'rounded-tr-[20px]' },
-    { imgPos: 'object-[30%_80%]', outer: 'rounded-bl-[20px]', innerAt: 'top-0 right-0',    innerR: 'rounded-bl-[20px]' },
-    { imgPos: 'object-[70%_80%]', outer: 'rounded-br-[20px]', innerAt: 'top-0 left-0',     innerR: 'rounded-br-[20px]' },
+    { img: '/Projekt_Images/Haus1.png', alt: 'Referenzprojekt 1', imgPos: 'object-center' },
+    { img: '/Projekt_Images/Haus2.png', alt: 'Referenzprojekt 2', imgPos: 'object-center' },
+    { img: '/Projekt_Images/Haus3.png', alt: 'Referenzprojekt 3', imgPos: 'object-center' },
+    { img: '/Projekt_Images/Haus4.png', alt: 'Referenzprojekt 4', imgPos: 'object-center' },
   ];
 </script>
 
@@ -94,21 +94,17 @@
       </div>
 
       <!-- Right: Diced Image Grid -->
-      <div class="grid grid-cols-2 gap-3">
+      <div class="grid grid-cols-2 gap-[9px] rounded-[20px] overflow-hidden bg-white/10">
         {#each tiles as tile}
           <div
-            class="relative overflow-hidden group {tile.outer}"
+            class="relative overflow-hidden group"
             style="height: clamp(160px, 22vw, 260px);"
           >
             <img
-              src="/images/dach.png"
-              alt="Dachdecker bei der Arbeit"
+              src={tile.img}
+              alt={tile.alt}
               class="w-full h-full object-cover {tile.imgPos} transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
             />
-            <!-- vignette -->
-            <div class="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
-            <!-- Concave inner corner: pure black overlay blocks spotlight & creates concave shape -->
-            <div class="absolute {tile.innerAt} w-[60px] h-[60px] bg-black {tile.innerR} pointer-events-none"></div>
           </div>
         {/each}
       </div>

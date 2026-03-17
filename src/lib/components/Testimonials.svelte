@@ -27,19 +27,22 @@
   ];
 </script>
 
-<section class="bg-[#F2F2F0] py-24">
+<section class="bg-anthrazit py-24 border-t border-white/10">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="mb-14">
-      <p class="text-signal-orange text-sm font-semibold tracking-widest uppercase mb-3">Kundenstimmen</p>
-      <h2 class="font-display font-bold text-anthrazit text-4xl lg:text-5xl leading-tight">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-1 h-7 bg-signal-orange rounded-full"></div>
+        <p class="text-signal-orange text-sm font-mono font-semibold tracking-widest uppercase">Kundenstimmen</p>
+      </div>
+      <h2 class="font-display font-bold text-white text-4xl lg:text-5xl leading-tight">
         Was unsere Kunden<br />sagen.
       </h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       {#each testimonials as t}
-        <div class="bg-white rounded-2xl p-8 flex flex-col gap-5 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-5 hover:border-white/20 transition-all duration-300">
           <!-- Stars -->
           <div class="flex gap-1">
             {#each Array(t.rating) as _}
@@ -50,12 +53,12 @@
           </div>
 
           <!-- Quote -->
-          <p class="text-anthrazit/70 text-base leading-relaxed flex-1">
+          <p class="text-white/65 text-base leading-relaxed flex-1">
             „{t.text}"
           </p>
 
           <!-- Author -->
-          <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
             <div
               class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
               style="background: {t.color}"
@@ -63,8 +66,8 @@
               {t.initial}
             </div>
             <div>
-              <p class="font-semibold text-anthrazit text-sm">{t.name}</p>
-              <p class="text-anthrazit/40 text-xs">{t.location}</p>
+              <p class="font-semibold text-white text-sm">{t.name}</p>
+              <p class="text-white/35 text-xs font-mono">{t.location}</p>
             </div>
           </div>
         </div>
