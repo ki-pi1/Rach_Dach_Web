@@ -21,3 +21,9 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Playwright / Debug-Screenshots
+.playwright-mcp/
+*.png
+!static/**/*.png
+!Projekt_Images/*.png
