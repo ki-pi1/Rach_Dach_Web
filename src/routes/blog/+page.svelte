@@ -8,7 +8,7 @@
     'Notfälle & Sicherheit': 'bg-red-500/15 text-red-400',
     'Photovoltaik & Energie': 'bg-yellow-500/15 text-yellow-400',
     'Begrünung & Ökologie': 'bg-green-500/15 text-green-400',
-    'Dämmung & Energieeffizienz': 'bg-stahl-blue/15 text-stahl-blue',
+    'Dämmung & Energieeffizienz': 'bg-blue-500/15 text-blue-400',
   };
 
   function formatDate(dateStr: string) {

@@ -77,9 +77,9 @@
       </div>
 
       <!-- Medium card: Neueindeckung -->
-      <div class="lg:col-span-5 bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col justify-between group hover:border-stahl-blue/50 transition-all duration-300 hover:-translate-y-1 min-h-[200px]">
+      <div class="lg:col-span-5 bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col justify-between group hover:border-green-500/50 transition-all duration-300 hover:-translate-y-1 min-h-[200px]">
         <div>
-          <div class="w-10 h-10 text-stahl-blue mb-5">
+          <div class="w-10 h-10 text-green-400 mb-5">
             {@html services[1].icon}
           </div>
           <h3 class="font-display font-bold text-white text-2xl mb-3">
@@ -91,7 +91,7 @@
         </div>
         <a
           href="#kontakt"
-          class="inline-flex items-center gap-2 text-stahl-blue font-semibold text-sm mt-5 group/link"
+          class="inline-flex items-center gap-2 text-green-400 font-semibold text-sm mt-5 group/link"
         >
           {services[1].cta}
           <span class="transition-transform duration-200 group-hover/link:translate-x-1">→</span>
