@@ -35,7 +35,7 @@
       name: 'Sergej Zyplakov',
       role: 'Erfahrener Dachdecker',
       badge: 'Geselle',
-      badgeColor: 'bg-stahl-blue/15 text-stahl-blue',
+      badgeColor: 'bg-green-500/20 text-green-400',
       since: '2011',
       photo: '/Projekt_Images/Sergei.png',
       initials: 'SZ',
