@@ -36,10 +36,16 @@
       <div>
         <p class="text-white/30 text-xs font-semibold tracking-widest uppercase mb-5">Navigation</p>
         <ul class="flex flex-col gap-3">
-          {#each ['Leistungen', 'Referenzen', 'Über uns', 'Kontakt', 'Notruf'] as item}
+          {#each [
+            { label: 'Leistungen', href: '/#leistungen' },
+            { label: 'Referenzen', href: '/referenzen' },
+            { label: 'Über uns', href: '/ueber-uns' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'Kontakt', href: '/#kontakt' },
+          ] as item}
             <li>
-              <a href="#{item.toLowerCase()}" class="text-white/50 hover:text-white text-sm transition-colors duration-200">
-                {item}
+              <a href={item.href} class="text-white/50 hover:text-white text-sm transition-colors duration-200">
+                {item.label}
               </a>
             </li>
           {/each}

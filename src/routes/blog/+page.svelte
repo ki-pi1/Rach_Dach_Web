@@ -35,7 +35,7 @@
         <div class="w-1 h-8 bg-signal-orange rounded-full"></div>
         <span class="font-mono text-signal-orange text-sm tracking-widest uppercase">Fachwissen</span>
       </div>
-      <h1 class="font-display text-5xl lg:text-7xl font-bold text-white leading-none mb-6">
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-none mb-6">
         Dachdecker<span class="text-signal-orange">.</span>Blog
       </h1>
       <p class="text-white/60 text-lg max-w-xl">

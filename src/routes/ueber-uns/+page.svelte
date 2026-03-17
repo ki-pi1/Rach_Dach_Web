@@ -48,7 +48,7 @@
   ];
 
   const milestones = [
-    { year: '1998', text: 'Gründung durch Andreas Rach nach Gesellenzeit' },
+    { year: '1998', text: 'Gründung durch Alex Rach nach Gesellenzeit' },
     { year: '2003', text: 'Meisterbrief und offizielle Firmengründung Rach & Schleich GmbH' },
     { year: '2011', text: 'Erweiterung des Teams, erste Gewerbe-Großprojekte' },
     { year: '2019', text: 'Einstieg in Photovoltaik und Dachbegrünung' },
