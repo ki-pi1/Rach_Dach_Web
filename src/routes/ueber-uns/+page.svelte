@@ -9,7 +9,7 @@
       badge: 'Meister',
       badgeColor: 'bg-signal-orange/15 text-signal-orange',
       since: '1998',
-      photo: null,
+      photo: '/Projekt_Images/Alex.png',
       initials: 'AR',
       accentFrom: 'from-signal-orange/30',
       accentTo: 'to-anthrazit',
@@ -18,30 +18,30 @@
       fact: 'Hat mit eigenen Händen über 400 Dächer gedeckt.',
     },
     {
-      name: 'Michael Wenner',
+      name: 'Vitali Schleich',
       role: 'Elektriker & Photovoltaik-Spezialist',
       badge: 'Elektrofachkraft',
       badgeColor: 'bg-yellow-500/15 text-yellow-400',
       since: '2019',
-      photo: null,
-      initials: 'MW',
+      photo: '/Projekt_Images/Vitali.png',
+      initials: 'VS',
       accentFrom: 'from-yellow-600/25',
       accentTo: 'to-anthrazit',
-      bio: 'Michael Wenner ist gelernter Elektroinstallateur und hat sich frühzeitig auf Photovoltaik und Gebäudeenergietechnik spezialisiert. Seit 2019 ist er fester Bestandteil des Teams und verantwortet alle elektrischen Arbeiten rund um PV-Anlagen, Blitzschutz und Dachsensorik. Seine Zertifizierungen umfassen SMA, Fronius und KACO.',
+      bio: 'Vitali Schleich ist gelernter Elektroinstallateur und hat sich frühzeitig auf Photovoltaik und Gebäudeenergietechnik spezialisiert. Seit 2019 ist er fester Bestandteil des Teams und verantwortet alle elektrischen Arbeiten rund um PV-Anlagen, Blitzschutz und Dachsensorik. Seine Zertifizierungen umfassen SMA, Fronius und KACO.',
       skills: ['Photovoltaik', 'Blitzschutz', 'DC/AC-Verkabelung', 'Wechselrichter', 'Energiespeicher'],
       fact: 'Bisher über 80 PV-Anlagen auf Wohn- und Gewerbegebäuden installiert.',
     },
     {
-      name: 'Tobias Gruber',
+      name: 'Sergej Zyplakov',
       role: 'Erfahrener Dachdecker',
       badge: 'Geselle',
       badgeColor: 'bg-stahl-blue/15 text-stahl-blue',
       since: '2011',
-      photo: null,
-      initials: 'TG',
+      photo: '/Projekt_Images/Sergei.png',
+      initials: 'SZ',
       accentFrom: 'from-stahl-blue/30',
       accentTo: 'to-anthrazit',
-      bio: 'Tobias Gruber ist seit über 13 Jahren im Betrieb und kennt jeden Dachtyp aus dem Effeff. Er leitet Kolonnen auf der Baustelle, ist Ansprechpartner für Kunden vor Ort und sorgt dafür, dass Zeitplan und Qualität stimmen. Kunden schätzen seine ruhige Art und seine direkte, ehrliche Kommunikation.',
+      bio: 'Sergej Zyplakov ist seit über 13 Jahren im Betrieb und kennt jeden Dachtyp aus dem Effeff. Er leitet Kolonnen auf der Baustelle, ist Ansprechpartner für Kunden vor Ort und sorgt dafür, dass Zeitplan und Qualität stimmen. Kunden schätzen seine ruhige Art und seine direkte, ehrliche Kommunikation.',
       skills: ['Steildachdeckung', 'Blechnerarbeiten', 'Gauben', 'Dachfenster', 'Gerüstkoordination'],
       fact: 'Seit 13 Jahren kein einziger Kundenbeschwerdefall.',
     },
@@ -135,21 +135,20 @@
         {#each team as person}
           <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col">
 
-            <!-- Foto-Platzhalter -->
-            <div class="relative h-64 bg-gradient-to-b {person.accentFrom} {person.accentTo} flex flex-col items-center justify-center gap-3">
-              <!-- Avatar -->
-              <div class="w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center">
-                <span class="font-display text-2xl font-bold text-white/60">{person.initials}</span>
-              </div>
-              <!-- Foto-Hinweis -->
-              <div class="flex items-center gap-2 text-white/25 text-xs font-mono">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Foto folgt
-              </div>
+            <!-- Foto -->
+            <div class="relative h-64 bg-gradient-to-b {person.accentFrom} {person.accentTo} overflow-hidden flex flex-col items-center justify-center gap-3">
+              {#if person.photo}
+                <img
+                  src={person.photo}
+                  alt={person.name}
+                  class="absolute inset-0 w-full h-full object-cover object-top"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-anthrazit/60 to-transparent"></div>
+              {:else}
+                <div class="w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center">
+                  <span class="font-display text-2xl font-bold text-white/60">{person.initials}</span>
+                </div>
+              {/if}
               <!-- Seit-Badge -->
               <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1">
                 <span class="font-mono text-white/50 text-xs">seit {person.since}</span>
