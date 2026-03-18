@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths';
+
   let heroEl: HTMLElement;
   let mouseX = $state(0);
   let mouseY = $state(0);
@@ -9,12 +11,11 @@
     mouseY = e.clientY - rect.top;
   }
 
-  // Outer corner: rounded. Inner corner: concave via background-colored overlay div.
   const tiles = [
-    { img: '/Projekt_Images/Haus1.png', alt: 'Referenzprojekt 1', imgPos: 'object-center' },
-    { img: '/Projekt_Images/Haus2.png', alt: 'Referenzprojekt 2', imgPos: 'object-center' },
-    { img: '/Projekt_Images/Haus3.png', alt: 'Referenzprojekt 3', imgPos: 'object-center' },
-    { img: '/Projekt_Images/Haus4.png', alt: 'Referenzprojekt 4', imgPos: 'object-center' },
+    { img: `${base}/Projekt_Images/Haus1.png`, alt: 'Referenzprojekt 1', imgPos: 'object-center' },
+    { img: `${base}/Projekt_Images/Haus2.png`, alt: 'Referenzprojekt 2', imgPos: 'object-center' },
+    { img: `${base}/Projekt_Images/Haus3.png`, alt: 'Referenzprojekt 3', imgPos: 'object-center' },
+    { img: `${base}/Projekt_Images/Haus4.png`, alt: 'Referenzprojekt 4', imgPos: 'object-center' },
   ];
 </script>
 

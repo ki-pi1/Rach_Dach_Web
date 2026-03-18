@@ -57,7 +57,7 @@
           <!-- Image -->
           <div class="lg:col-span-2 bg-gradient-to-br from-signal-orange/20 to-stahl-blue/20 min-h-56 relative overflow-hidden flex items-center justify-center">
             <img
-              src="/Projekt_Images/Bild3.png"
+              src="{base}/Projekt_Images/Bild3.png"
               alt="Dachsanierung"
               class="w-[70%] h-[70%] object-contain relative z-10"
             />
