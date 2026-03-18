@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { base } from '$app/paths';
 
   const team = [
     {
@@ -264,7 +265,7 @@
       </h2>
       <p class="text-white/60 mb-8">Kostenloses Vor-Ort-Gespräch – kein Callcenter, kein Formular-Ping-Pong.</p>
       <a
-        href="/#kontakt"
+        href="{base}/#kontakt"
         class="inline-block bg-signal-orange hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded transition-colors"
       >
         Jetzt Termin anfragen

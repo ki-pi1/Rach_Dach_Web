@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <footer class="bg-[#0f0f0f] border-t border-white/5 py-14">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
@@ -16,7 +20,7 @@
         <div class="flex gap-3 mt-2">
           {#each ['Facebook', 'Instagram'] as platform}
             <a
-              href="/"
+              href="{base}/"
               class="w-8 h-8 rounded border border-white/10 hover:border-white/30 flex items-center justify-center text-white/40 hover:text-white transition-all duration-200"
               aria-label={platform}
             >
@@ -37,11 +41,11 @@
         <p class="text-white/30 text-xs font-semibold tracking-widest uppercase mb-5">Navigation</p>
         <ul class="flex flex-col gap-3">
           {#each [
-            { label: 'Leistungen', href: '/#leistungen' },
-            { label: 'Referenzen', href: '/referenzen' },
-            { label: 'Über uns', href: '/ueber-uns' },
-            { label: 'Blog', href: '/blog' },
-            { label: 'Kontakt', href: '/#kontakt' },
+            { label: 'Leistungen', href: `${base}/#leistungen` },
+            { label: 'Referenzen', href: `${base}/referenzen` },
+            { label: 'Über uns', href: `${base}/ueber-uns` },
+            { label: 'Blog', href: `${base}/blog` },
+            { label: 'Kontakt', href: `${base}/#kontakt` },
           ] as item}
             <li>
               <a href={item.href} class="text-white/50 hover:text-white text-sm transition-colors duration-200">
@@ -79,8 +83,8 @@
     <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/25">
       <p>© {new Date().getFullYear()} Rach&amp;Schleich GmbH. Alle Rechte vorbehalten.</p>
       <div class="flex gap-6">
-        <a href="/impressum" class="hover:text-white/50 transition-colors">Impressum</a>
-        <a href="/datenschutz" class="hover:text-white/50 transition-colors">Datenschutz</a>
+        <a href="{base}/impressum" class="hover:text-white/50 transition-colors">Impressum</a>
+        <a href="{base}/datenschutz" class="hover:text-white/50 transition-colors">Datenschutz</a>
       </div>
     </div>
   </div>

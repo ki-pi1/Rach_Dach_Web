@@ -3,6 +3,7 @@
   import { getPost, blogPosts } from '$lib/blog-posts';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { base } from '$app/paths';
 
   const post = $derived($page.params.slug ? getPost($page.params.slug) : undefined);
 
@@ -37,7 +38,7 @@
     <!-- Article Header -->
     <section class="pt-32 pb-12 px-6 border-b border-white/10">
       <div class="max-w-3xl mx-auto">
-        <a href="/blog" class="inline-flex items-center gap-2 text-white/40 hover:text-white/80 text-sm font-mono mb-8 transition-colors">
+        <a href="{base}/blog" class="inline-flex items-center gap-2 text-white/40 hover:text-white/80 text-sm font-mono mb-8 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
@@ -79,7 +80,7 @@
           <div>
             <p class="text-white font-semibold mb-1">Rach &amp; Schleich GmbH</p>
             <p class="text-white/50 text-sm">Dachdecker-Meisterbetrieb aus Regensburg. Über 20 Jahre Erfahrung in Dachdeckung, Dämmung und Blechnerarbeiten.</p>
-            <a href="/#kontakt" class="inline-block mt-3 text-signal-orange text-sm font-semibold hover:underline">Kostenlose Beratung anfragen →</a>
+            <a href="{base}/#kontakt" class="inline-block mt-3 text-signal-orange text-sm font-semibold hover:underline">Kostenlose Beratung anfragen →</a>
           </div>
         </div>
       </div>
@@ -93,7 +94,7 @@
           <div class="grid md:grid-cols-3 gap-5">
             {#each otherPosts as other}
               <a
-                href="/blog/{other.slug}"
+                href="{base}/blog/{other.slug}"
                 class="group bg-white/5 border border-white/10 rounded-xl p-6 hover:border-signal-orange/50 transition-all duration-300"
               >
                 <span class="text-xs font-semibold px-2 py-1 rounded-full {categoryColors[other.category]} font-mono mb-3 inline-block">
@@ -118,7 +119,7 @@
     <div class="text-center">
       <p class="font-mono text-signal-orange text-sm mb-4">404</p>
       <h1 class="font-display text-4xl font-bold text-white mb-4">Artikel nicht gefunden</h1>
-      <a href="/blog" class="text-white/60 hover:text-white underline">Zurück zum Blog</a>
+      <a href="{base}/blog" class="text-white/60 hover:text-white underline">Zurück zum Blog</a>
     </div>
   </main>
   <Footer />

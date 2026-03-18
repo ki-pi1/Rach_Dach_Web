@@ -2,6 +2,7 @@
   import { referenzen } from '$lib/referenzen';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { base } from '$app/paths';
 
   const categoryColors: Record<string, string> = {
     'Dachsanierung': 'bg-signal-orange/15 text-signal-orange',
@@ -58,7 +59,7 @@
     <div class="max-w-6xl mx-auto flex flex-col gap-8">
       {#each referenzen as ref, i}
         <a
-          href="/referenzen/{ref.slug}"
+          href="{base}/referenzen/{ref.slug}"
           class="group grid lg:grid-cols-5 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-signal-orange/50 transition-all duration-300"
         >
           <!-- Visual panel -->
@@ -110,7 +111,7 @@
       </h2>
       <p class="text-white/60 mb-8">Kostenloses Vor-Ort-Angebot innerhalb von 48 Stunden.</p>
       <a
-        href="/#kontakt"
+        href="{base}/#kontakt"
         class="inline-block bg-signal-orange hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded transition-colors"
       >
         Angebot anfordern

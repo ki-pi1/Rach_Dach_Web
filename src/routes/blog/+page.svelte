@@ -2,6 +2,7 @@
   import { blogPosts } from '$lib/blog-posts';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { base } from '$app/paths';
 
   const categoryColors: Record<string, string> = {
     'Kosten & Preise': 'bg-signal-orange/15 text-signal-orange',
@@ -49,7 +50,7 @@
     <div class="max-w-6xl mx-auto">
       <!-- Featured post (first article) -->
       <a
-        href="/blog/{blogPosts[0].slug}"
+        href="{base}/blog/{blogPosts[0].slug}"
         class="group block mb-10 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-signal-orange/50 transition-all duration-300"
       >
         <div class="grid lg:grid-cols-5">
@@ -86,7 +87,7 @@
       <div class="grid md:grid-cols-2 gap-6">
         {#each blogPosts.slice(1) as post}
           <a
-            href="/blog/{post.slug}"
+            href="{base}/blog/{post.slug}"
             class="group bg-white/5 border border-white/10 rounded-xl p-7 hover:border-signal-orange/50 hover:bg-white/8 transition-all duration-300 flex flex-col"
           >
             <div class="flex items-center gap-3 mb-4">
@@ -117,7 +118,7 @@
       </h2>
       <p class="text-white/60 mb-8">Wir beraten Sie kostenlos und unverbindlich – telefonisch oder vor Ort.</p>
       <a
-        href="/#kontakt"
+        href="{base}/#kontakt"
         class="inline-block bg-signal-orange hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded transition-colors"
       >
         Jetzt Kontakt aufnehmen

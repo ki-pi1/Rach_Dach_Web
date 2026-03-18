@@ -1,16 +1,17 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
 
   let scrolled = $state(false);
   let menuOpen = $state(false);
 
-  const isHome = $derived($page.url.pathname === '/');
-  const anchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
+  const isHome = $derived($page.url.pathname === base || $page.url.pathname === base + '/');
+  const anchor = (id: string) => isHome ? `#${id}` : `${base}/#${id}`;
 
   const navItems = [
     { label: 'Leistungen', href: () => anchor('leistungen') },
-    { label: 'Referenzen', href: () => '/referenzen' },
-    { label: 'Über uns', href: () => '/ueber-uns' },
+    { label: 'Referenzen', href: () => `${base}/referenzen` },
+    { label: 'Über uns', href: () => `${base}/ueber-uns` },
     { label: 'Kontakt', href: () => anchor('kontakt') },
   ];
 
@@ -27,7 +28,7 @@
 >
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 group">
+    <a href="{base}/" class="flex items-center gap-2 group">
       <span class="w-8 h-8 bg-signal-orange rounded flex items-center justify-center text-white font-display font-bold text-sm">R</span>
       <span class="font-display font-bold text-white text-lg tracking-tight">
         Rach<span class="text-signal-orange">&amp;</span>Schleich
@@ -47,7 +48,7 @@
         </li>
       {/each}
       <li>
-        <a href="/blog" class="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200">
+        <a href="{base}/blog" class="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200">
           Blog
         </a>
       </li>
@@ -92,7 +93,7 @@
         </a>
       {/each}
       <a
-        href="/blog"
+        href="{base}/blog"
         class="text-white/80 hover:text-white text-base font-medium transition-colors"
         onclick={() => (menuOpen = false)}
       >

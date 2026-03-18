@@ -3,6 +3,7 @@
   import { getReferenz, referenzen } from '$lib/referenzen';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { base } from '$app/paths';
 
   const ref = $derived($page.params.slug ? getReferenz($page.params.slug) : undefined);
 
@@ -37,7 +38,7 @@
     <!-- Header -->
     <section class="pt-32 pb-12 px-6 border-b border-white/10">
       <div class="max-w-3xl mx-auto">
-        <a href="/referenzen" class="inline-flex items-center gap-2 text-white/40 hover:text-white/80 text-sm font-mono mb-8 transition-colors">
+        <a href="{base}/referenzen" class="inline-flex items-center gap-2 text-white/40 hover:text-white/80 text-sm font-mono mb-8 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
@@ -91,7 +92,7 @@
             <p class="text-white/60 text-sm">Wir erstellen Ihnen ein kostenloses Angebot – vor Ort und innerhalb von 48 Stunden.</p>
           </div>
           <a
-            href="/#kontakt"
+            href="{base}/#kontakt"
             class="shrink-0 bg-signal-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded transition-colors text-sm whitespace-nowrap"
           >
             Angebot anfordern
@@ -108,7 +109,7 @@
           <div class="grid md:grid-cols-2 gap-5">
             {#each otherRefs as other}
               <a
-                href="/referenzen/{other.slug}"
+                href="{base}/referenzen/{other.slug}"
                 class="group bg-white/5 border border-white/10 rounded-xl p-6 hover:border-signal-orange/50 transition-all duration-300"
               >
                 <span class="text-xs font-semibold px-2 py-1 rounded-full {categoryColors[other.category]} font-mono mb-3 inline-block">
@@ -138,7 +139,7 @@
     <div class="text-center">
       <p class="font-mono text-signal-orange text-sm mb-4">404</p>
       <h1 class="font-display text-4xl font-bold text-white mb-4">Referenz nicht gefunden</h1>
-      <a href="/referenzen" class="text-white/60 hover:text-white underline">Zurück zu den Referenzen</a>
+      <a href="{base}/referenzen" class="text-white/60 hover:text-white underline">Zurück zu den Referenzen</a>
     </div>
   </main>
   <Footer />
