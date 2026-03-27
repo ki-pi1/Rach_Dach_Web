@@ -59,8 +59,8 @@
           Diese Website wird auf einem Virtual Private Server (VPS) des Anbieters
           <strong>Hostinger International Ltd.</strong>, 61 Lordou Vironos str., 6023 Larnaca, Zypern,
           gehostet. Weitere Informationen zum Datenschutz bei Hostinger finden Sie unter:
-          <a href="https://www.hostinger.de/datenschutzrichtlinie" target="_blank" rel="noopener noreferrer">
-            https://www.hostinger.de/datenschutzrichtlinie
+          <a href="https://www.hostinger.com/de/legal/datenschutz-bestimmungen" target="_blank" rel="noopener noreferrer">
+            https://www.hostinger.com/de/legal/datenschutz-bestimmungen
           </a>
         </p>
         <p>
