@@ -29,10 +29,7 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
     <!-- Logo -->
     <a href="{base}/" class="flex items-center gap-2 group">
-      <span class="w-8 h-8 bg-signal-orange rounded flex items-center justify-center text-white font-display font-bold text-sm">R</span>
-      <span class="font-display font-bold text-white text-lg tracking-tight">
-        Rach<span class="text-signal-orange">&amp;</span>Schleich
-      </span>
+      <img src="{base}/logo_2.png" alt="Rach & Schleich" class="h-7 w-auto" />
     </a>
 
     <!-- Desktop Nav -->

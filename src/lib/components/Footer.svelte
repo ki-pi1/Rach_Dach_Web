@@ -9,10 +9,7 @@
       <!-- Brand -->
       <div class="flex flex-col gap-4">
         <div class="flex items-center gap-2">
-          <span class="w-8 h-8 bg-signal-orange rounded flex items-center justify-center text-white font-display font-bold text-sm">R</span>
-          <span class="font-display font-bold text-white text-lg tracking-tight">
-            Rach<span class="text-signal-orange">&amp;</span>Schleich GmbH
-          </span>
+          <img src="{base}/logo_2.png" alt="Rach & Schleich" class="h-8 w-auto" />
         </div>
         <p class="text-white/40 text-sm leading-relaxed max-w-xs">
           Ihr zertifizierter Dachdecker-Meisterbetrieb. Qualität, die schützt.
